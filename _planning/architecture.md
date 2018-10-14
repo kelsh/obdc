@@ -1,7 +1,7 @@
 # Architecture
 
 ## Process
-1. Get SEO started via
+1. Get SEO started via ____ (wordpress/etc.)
 2. Confirm SEO is established
 3. Switch to "Long Term" strategy
 4. Develop long-term stragety, continually ensuring short-term is generating SEO
