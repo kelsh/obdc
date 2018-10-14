@@ -1,5 +1,4 @@
 # obdc
-office blankets dot com
+office blankets (dot com)
 
-## Architecture
-- @TODO: decide architecture
+## [Architecture](http://google.com/)
