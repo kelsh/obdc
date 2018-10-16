@@ -1,0 +1,27 @@
+{
+  "name": "office-blankets-phase-1",
+  "version": "1.0.0",
+  "description": "Static Placeholder for Office Blankets Dot Com",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kelsh/obdc.git"
+  },
+  "keywords": [
+    "office",
+    "blankets"
+  ],
+  "author": "dr33mt33m",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kelsh/obdc/issues"
+  },
+  "homepage": "https://github.com/kelsh/obdc#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "helmet": "^3.14.0"
+  }
+}

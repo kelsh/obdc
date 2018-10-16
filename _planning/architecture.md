@@ -1,9 +1,9 @@
 # Architecture
 
-## Process
-1. Get SEO started via ____ (wordpress/etc.)
+## Plan
+1. Get SEO established via static site ("Short-Term Strategy")
 2. Confirm SEO is established
-3. Switch to "Long Term" strategy
+3. Switch to "Long-Term Strategy"
 4. Develop long-term stragety, continually ensuring short-term is generating SEO
 
 ### Questions
