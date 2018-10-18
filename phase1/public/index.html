@@ -25,23 +25,42 @@
       <a class="modal-trigger" data-modal="survey" href="#survey">Take the survey &gt;</a>
    </h2>
 
-   <!-- Modals -->
+   <!-- Survey Modal -->
    <div class="modal" data-modal="survey" data-modal-active="false">
       <div class="modal__content">
          <form class="form">
-            <div class="survey" data-survey-step="1">
-               <label>
-                  <span>What's your name?</span>
-                  <input type="text" name="name">
+            <div class="survey-errors"></div>
+            <div class="survey active" data-survey-step="1">
+               <label for="known">
+                  <span class="form-title">I know what an "office blanket" is:</span>
+                  <span class="rows radio-group">
+                     <input type="radio" name="known" value="true"><span data-click-helper="input[name='known'][value='true']">Yes</span>
+                     &nbsp;&nbsp;&nbsp;
+                     <input type="radio" name="known" value="false"><span data-click-helper="input[name='known'][value='false']">No</span>
+                  </span>
                </label>
-               <label>
-                  <span>What's your email?</span>
-                  <input type="email" name="email">
+               <label for="known">
+                  <span class="form-title">The most I would pay for an office blanket:</span>
+                  <span class="rows radio-group">
+                     <input type="radio" name="maxPrice" value="10"> <span data-click-helper="input[name='maxPrice'][value='10']">$10</span>
+                     &nbsp;&nbsp;&nbsp;
+                     <input type="radio" name="maxPrice" value="20"> <span data-click-helper="input[name='maxPrice'][value='20']">$20</span>
+                     &nbsp;&nbsp;&nbsp;
+                     <input type="radio" name="maxPrice" value="30"> <span data-click-helper="input[name='maxPrice'][value='30']">$30</span>
+                     &nbsp;&nbsp;&nbsp;
+                     <input type="radio" name="maxPrice" value="40"> <span data-click-helper="input[name='maxPrice'][value='40']">$40</span>
+                     &nbsp;&nbsp;&nbsp;
+                     <input type="radio" name="maxPrice" value="69"> <span data-click-helper="input[name='maxPrice'][value='69']">$69</span>
+                  </span>
                </label>
-               <button>Next &gt;</button>
+               <button data-survey-page="2">Next</button>
             </div>
             <div class="survey" data-survey-step="2">
 
+               <div class="container flex-row">
+                  <button data-survey-page="1">Back</button>&nbsp;&nbsp;&nbsp;&nbsp;
+                  <button data-survey-page="3">Next</button>
+               </div>
             </div>
          </form>
       </div>

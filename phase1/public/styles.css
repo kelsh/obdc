@@ -196,11 +196,18 @@ html {
    display: block;
    position: relative;
 }
+.container.flex-row {
+   display: flex;
+   flex-direction: row;
+}
 
 .container__content {
    position: relative;
-   display: block;
    padding: 0 1.25rem;
+}
+.container.flex-row .container__content {
+   align-items: center;
+   justify-content: center;
 }
 
 /**
@@ -275,7 +282,9 @@ html {
    z-index: 70;
    padding: 2.5rem 2rem;
    background-color: rgba(255,255,255,.92);
-   border: 10px solid #fff;
+   border: 8px solid #fff;
+   max-width: 469px;
+   border-radius: 10px;
 }
 
 /**
@@ -293,24 +302,73 @@ html {
    flex-direction: column;
    margin-bottom: 2rem;
 }
-.form label span {
-   font-size: .8rem;
-   text-transform: uppercase;
+.form label.row {
+   flex-direction: row;
+   align-items: center;
+   flex-wrap: wrap;
+}
+.form label span.form-title {
    font-weight: bold;
-   margin-bottom: .5rem;
+   margin-bottom: 1rem;
+}
+.form label span.rows {
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   align-items: center;
 }
 .form label input {
    font-size: 1.2rem;
    padding: .5rem 1rem;
 }
+.form label input[type=checkbox],
+.form label input[type=radio] {
+   width: 25px;
+   height: 25px;
+   display: inline-block;
+   margin-right: 4px;
+}
 .form button {
-   margin-top: 1.4rem;
+   margin-top: 1rem;
    position: relative;
-   background: #2f2f2f;
-   color: #fff;
-   border: 0;
-   padding: .75rem 1.25rem;
-   text-transform: uppercase;
+   border: 6px solid#333;
+   background: #fff;
+   padding: .75rem 2.5rem;
    font-size: 1.2rem;
    cursor: pointer;
+   border-radius: 30px;
+   font-weight: bold;
+   transition: all .05s ease-in-out;
+}
+.form button.error {
+   border-color: #bb2222;
+   color: #bb2222;
+}
+
+/**
+ * Survey
+ */
+.survey {
+   display: none;
+   position: relative;
+   flex-direction: column;
+   justify-content: center;
+}
+.survey.active { display: flex; }
+
+.survey-errors {
+   display: none;
+   position: absolute;
+   bottom: -28px;
+   left: 0;
+   padding: 13px 6px 10px;
+   border-radius: 10px;
+   background: #bb2222;
+   width: 98%;
+   font-weight: bold;
+   color: #fff;
+}
+.survey-errors.active {
+   display: block;
+   text-align: center;
 }
