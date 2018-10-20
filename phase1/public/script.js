@@ -146,9 +146,26 @@ var survey = {
             if(passedRadios === radioGroups.length) return true;
          };
 
-         survey.validate.errorMessage = 'Please select an answer for each scenario';
+         //survey.validate.errorMessage = 'Please select an answer for each scenario';
          return false;
       },
+      images: function() {
+         // var imageGroups = survey.activePage().querySelectorAll('.image-group');
+         // var images = survey.activePage().getElementsByClassName('.image');
+         // if(
+         //    images === null ||
+         //    images.length < 1 ||
+         //    imageGroups === null ||
+         //    imageGroups.length < 1
+         // ) return true;
+
+         // var passedImages = 0;
+         // for (var i = 0; i < images.length; i += 1) {
+
+         // }
+
+         // return false;
+      }
    },
 
    addEventListeners() {

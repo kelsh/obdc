@@ -171,6 +171,8 @@ input {
 .lr { padding: 0 1.5rem; }
 .title { font-size: 4rem; font-family: 'title', Arial, Helvetica, sans-serif; }
 .title.title--small { font-size: 2.25rem; }
+.flex-center { justify-content: center; }
+.text-center { text-align: center; }
 
 /* App Styling */
 html { font-size: 100%; }
@@ -199,6 +201,7 @@ html {
 .container.flex-row {
    display: flex;
    flex-direction: row;
+   justify-content: center;
 }
 
 .container__content {
@@ -307,7 +310,8 @@ html {
    align-items: center;
    flex-wrap: wrap;
 }
-.form label span.form-title {
+.form label span.form-title,
+.form span.form-title {
    font-weight: bold;
    margin-bottom: 1rem;
 }
@@ -339,6 +343,7 @@ html {
    border-radius: 30px;
    font-weight: bold;
    transition: all .05s ease-in-out;
+   outline: 0;
 }
 .form button.error {
    border-color: #bb2222;
@@ -356,16 +361,36 @@ html {
 }
 .survey.active { display: flex; }
 
+.survey .image-group {
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   position: relative;
+   justify-content: center;
+   align-items: center;
+}
+.survey .image-group .image {
+   width: 150px;
+   height: auto;
+   margin: 6px;
+   border: 3px solid transparent;
+   cursor: pointer;
+}
+.survey .image-group .image:hover,
+.survey .image-group .image.selected
+ {
+   border-color: #333;
+}
+
 .survey-errors {
    display: none;
    position: absolute;
-   bottom: -28px;
+   bottom: -6px;
    left: 0;
    padding: 13px 6px 10px;
    border-radius: 10px;
-   background: #bb2222;
-   width: 98%;
-   font-weight: bold;
+   background: #992222;
+   width: 100%;
    color: #fff;
 }
 .survey-errors.active {
