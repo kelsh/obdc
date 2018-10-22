@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+   <!-- Meta -->
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+   <title>Office Blankets | Warm up at work</title>
+
+   <!-- Styles -->
+   <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <header>
+    <img src="obdc.png" alt="Office Blankets Logo">
+  </header>
+   <!-- Hero -->
+   <h1 class="title cta">
+      Office Blankets
+      <span>warm up at work</span>
+   </h1>
+
+   <!-- Survey CTA Box -->
+   <h2 class="title cta reverse bg-ice-before">
+      Getting Cold?<br />
+      <a class="modal-trigger" data-modal="survey" href="#survey">Take the survey &gt;</a>
+   </h2>
+
+   <!-- Survey Modal -->
+   <div class="modal" data-modal="survey" data-modal-active="false">
+      <div class="modal__content">
+         <form class="form">
+            <div class="survey-errors"></div>
+            <div class="survey active" data-survey-step="1">
+               <label for="known">
+                  <span class="form-title">I know what an "office blanket" is:</span>
+                  <span class="rows radio-group">
+                     <input type="radio" name="known" value="true"><span data-click-helper="input[name='known'][value='true']">Yes</span>
+                     &nbsp;&nbsp;&nbsp;
+                     <input type="radio" name="known" value="false"><span data-click-helper="input[name='known'][value='false']">No</span>
+                  </span>
+               </label>
+               <label for="known">
+                  <span class="form-title">The most I would pay for an office blanket:</span>
+                  <span class="rows radio-group">
+                     <input type="radio" name="maxPrice" value="10"> <span data-click-helper="input[name='maxPrice'][value='10']">$10</span>
+                     &nbsp;&nbsp;&nbsp;
+                     <input type="radio" name="maxPrice" value="20"> <span data-click-helper="input[name='maxPrice'][value='20']">$20</span>
+                     &nbsp;&nbsp;&nbsp;
+                     <input type="radio" name="maxPrice" value="30"> <span data-click-helper="input[name='maxPrice'][value='30']">$30</span>
+                     &nbsp;&nbsp;&nbsp;
+                     <input type="radio" name="maxPrice" value="40"> <span data-click-helper="input[name='maxPrice'][value='40']">$40</span>
+                     &nbsp;&nbsp;&nbsp;
+                     <input type="radio" name="maxPrice" value="69"> <span data-click-helper="input[name='maxPrice'][value='69']">$69</span>
+                  </span>
+               </label>
+               <button data-survey-page="2">Next</button>
+            </div>
+            <div class="survey" data-survey-step="2">
+               <span class="form-title text-center">Choose the image you like best:</span>
+               <div class="image-group">
+                  <img class="image" src="http://placehold.it/600x600" alt="description" data-image-key="innocent" />
+                  <img class="image" src="http://placehold.it/600x600" alt="description" data-image-key="sexy" />
+                  <img class="image" src="http://placehold.it/600x600" alt="description" data-image-key="playful" />
+                  <img class="image" src="http://placehold.it/600x600" alt="description" data-image-key="serious" />
+               </div>
+               <div class="container flex-row">
+                  <button data-survey-page="1">Back</button>&nbsp;&nbsp;&nbsp;&nbsp;
+                  <button data-survey-page="3">Next</button>
+               </div>
+            </div>
+         </form>
+      </div>
+   </div>
+
+   <!-- JavaScript -->
+   <script src="script.js"></script>
+</body>
+
+</html>
