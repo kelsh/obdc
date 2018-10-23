@@ -229,11 +229,13 @@ header img{
  * CTA Blocks
  */
 .cta {
-   position: relative;
-   display: inline-block;
-   padding: 3.2rem;
-   z-index: 1;
-   margin: 0 auto 6rem;
+  position: relative;
+  display: inline-block;
+  padding: 3.2rem;
+  z-index: 1;
+  width: 35%;
+  margin: 0 auto 6rem;
+  text-align: center;
 }
 .cta span {
    display: block;
