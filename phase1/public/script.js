@@ -150,21 +150,21 @@ var survey = {
          return false;
       },
       images: function() {
-         // var imageGroups = survey.activePage().querySelectorAll('.image-group');
-         // var images = survey.activePage().getElementsByClassName('.image');
-         // if(
-         //    images === null ||
-         //    images.length < 1 ||
-         //    imageGroups === null ||
-         //    imageGroups.length < 1
-         // ) return true;
+         var imageGroups = survey.activePage().querySelectorAll('.image-group');
+         var images = survey.activePage().getElementsByClassName('.image');
+         if(
+            images === null ||
+            images.length < 1 ||
+            imageGroups === null ||
+            imageGroups.length < 1
+         ) return true;
 
-         // var passedImages = 0;
-         // for (var i = 0; i < images.length; i += 1) {
+         var passedImages = 0;
+         for (var i = 0; i < images.length; i += 1) {
 
-         // }
+         }
 
-         // return false;
+         return false;
       }
    },
 
@@ -212,4 +212,42 @@ document.addEventListener('DOMContentLoaded', function() {
    console.log('--------------------------');
    console.log('Welcome to Office Blankets');
    console.log('--------------------------');
+});
+
+$(document).ready(function () {
+
+  var windowWidth = $(window).width();
+  var windowHeight = $(window).height();
+  var canvas = document.getElementById("canvas");
+  var ctx = canvas.getContext("2d");
+
+  ctx.canvas.width = windowWidth;
+  ctx.canvas.height = windowHeight;
+
+  //generate random number for the x and y coordinates
+  //of all of the little star guys we wanna render
+
+
+  for (var i = 0; i < 1000; i++) {
+
+    var x = Math.random() * windowWidth;
+    var y = Math.random() * windowHeight;
+    var diamondX = Math.random() * windowWidth;
+    var diamondY = Math.random() * windowHeight;
+
+    ctx.beginPath();
+    ctx.fillStyle = `rgba(255,255,255, ${Math.random()})`;
+    ctx.moveTo(diamondX, diamondY - 5);
+    // ctx.quadraticCurveTo(diamondX, diamondY, diamondX + 5, diamondY);
+    // ctx.quadraticCurveTo(diamondX, diamondY, diamondX, diamondY + 5);
+    // ctx.quadraticCurveTo(diamondX, diamondY, diamondX - 5, diamondY);
+    // ctx.quadraticCurveTo(diamondX, diamondY, diamondX, diamondY - 5);
+    ctx.closePath();
+    ctx.fill();
+
+    ctx.beginPath();
+    ctx.arc(x, y, 1, 0, Math.PI * 2);
+    ctx.fillStyle = "white";
+    ctx.fill();
+  }
 });
