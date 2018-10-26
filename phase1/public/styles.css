@@ -169,7 +169,7 @@ input {
 
 /* App Utility */
 .lr { padding: 0 1.5rem; }
-.title { font-size: 4rem; font-family: 'title', Arial, Helvetica, sans-serif; }
+.title { font-size: 3rem; font-family: 'Abril Fatface', Arial, Helvetica, sans-serif; }
 .title.title--small { font-size: 2.25rem; }
 .flex-center { justify-content: center; }
 .text-center { text-align: center; }
@@ -245,8 +245,9 @@ header img{
 }
 .cta span {
    display: block;
-   font-size: 2rem;
+   font-size: 1.5rem;
    text-align: center;
+   font-family: 'Roboto'
 }
 .cta::before {
    content: "";
@@ -290,6 +291,10 @@ header img{
    height: 1px;
    width: 1px;
    overflow: hidden;
+}
+.modal-trigger{
+  font-family: 'Roboto', sans-serif;
+  font-size: 2rem;
 }
 .modal[data-modal-active=true] {
    width: auto; height: auto;
